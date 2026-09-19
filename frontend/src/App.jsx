@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api";
-
+const API_URL = "https://campusfind-d0mg.onrender.com/api";
 function App() {
   const [page, setPage] = useState("home");
   const [items, setItems] = useState([]);
