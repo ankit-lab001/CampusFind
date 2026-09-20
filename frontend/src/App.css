@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-/* =========================
-   GLOBAL
-========================= */
+/* =========================================================
+   CAMPUSFIND - CLEAN FINAL CSS
+========================================================= */
 
 * {
   box-sizing: border-box;
@@ -15,13 +15,13 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-family: "DM Sans", sans-serif;
   color: #18213d;
   background:
     radial-gradient(circle at 5% 10%, rgba(95, 96, 225, 0.14), transparent 30%),
     radial-gradient(circle at 95% 20%, rgba(32, 184, 202, 0.13), transparent 30%),
     #f7f9fe;
-  min-width: 320px;
 }
 
 button,
@@ -43,21 +43,27 @@ textarea:focus {
   outline: none;
 }
 
+input,
+select,
+textarea,
+button {
+  pointer-events: auto;
+}
+
 .campus-app {
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 .navbar {
   width: calc(100% - 28px);
   max-width: 1400px;
-  margin: 14px auto 0;
-
   min-height: 100px;
+  margin: 14px auto 0;
   padding: 18px 30px;
 
   display: flex;
@@ -71,11 +77,10 @@ textarea:focus {
   border: 1px solid #dce3f1;
   border-radius: 26px;
 
-  box-shadow:
-    0 20px 50px rgba(67, 78, 125, 0.08);
+  box-shadow: 0 20px 50px rgba(67, 78, 125, 0.08);
 
   position: relative;
-  z-index: 20;
+  z-index: 50;
 }
 
 .brand {
@@ -95,20 +100,14 @@ textarea:focus {
 
   border-radius: 16px;
 
-  background: linear-gradient(
-    135deg,
-    #5557df,
-    #20b8ca
-  );
-
+  background: linear-gradient(135deg, #5557df, #20b8ca);
   color: white;
 
   font-family: "Space Grotesk", sans-serif;
   font-size: 27px;
   font-weight: 700;
 
-  box-shadow:
-    0 10px 25px rgba(85, 87, 223, 0.25);
+  box-shadow: 0 10px 25px rgba(85, 87, 223, 0.25);
 }
 
 .brand h2 {
@@ -121,7 +120,6 @@ textarea:focus {
 .brand span {
   display: block;
   margin-top: 7px;
-
   color: #66718a;
   font-size: 14px;
   font-weight: 500;
@@ -164,19 +162,14 @@ textarea:focus {
   padding: 13px 21px;
 
   color: white;
-  background: linear-gradient(
-    135deg,
-    #5557df,
-    #20aeca
-  );
+  background: linear-gradient(135deg, #5557df, #20aeca);
 
   border-radius: 13px;
 
   font-size: 16px;
   font-weight: 700;
 
-  box-shadow:
-    0 10px 25px rgba(85, 87, 223, 0.22);
+  box-shadow: 0 10px 25px rgba(85, 87, 223, 0.22);
 
   transition:
     transform 0.25s ease,
@@ -185,20 +178,18 @@ textarea:focus {
 
 .nav-report-btn:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 15px 30px rgba(85, 87, 223, 0.30);
+  box-shadow: 0 15px 30px rgba(85, 87, 223, 0.3);
 }
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
   max-width: 1400px;
   min-height: 700px;
 
   margin: 0 auto;
-
   padding: 85px 55px 60px;
 
   display: grid;
@@ -223,7 +214,6 @@ textarea:focus {
   border-radius: 50px;
 
   background: rgba(255, 255, 255, 0.65);
-
   color: #5557df;
 
   font-size: 15px;
@@ -246,16 +236,13 @@ textarea:focus {
 }
 
 .hero h1 {
+  max-width: 760px;
   margin-top: 38px;
 
-  max-width: 760px;
-
   font-family: "Space Grotesk", sans-serif;
-
   font-size: clamp(58px, 6vw, 88px);
   line-height: 0.98;
   letter-spacing: -4px;
-
   color: #10142b;
 
   animation: fadeUp 0.8s ease;
@@ -264,12 +251,7 @@ textarea:focus {
 .hero h1 span {
   display: block;
 
-  background: linear-gradient(
-    90deg,
-    #5557df,
-    #20aeca
-  );
-
+  background: linear-gradient(90deg, #5557df, #20aeca);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -277,12 +259,10 @@ textarea:focus {
 
 .hero p {
   max-width: 680px;
-
   margin-top: 30px;
 
   font-size: 19px;
   line-height: 1.65;
-
   color: #526078;
 
   animation: fadeUp 1s ease;
@@ -311,27 +291,18 @@ textarea:focus {
 
 .primary-btn {
   color: white;
-
-  background: linear-gradient(
-    135deg,
-    #5557df,
-    #20aeca
-  );
-
-  box-shadow:
-    0 14px 30px rgba(85, 87, 223, 0.24);
+  background: linear-gradient(135deg, #5557df, #20aeca);
+  box-shadow: 0 14px 30px rgba(85, 87, 223, 0.24);
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 18px 35px rgba(85, 87, 223, 0.32);
+  box-shadow: 0 18px 35px rgba(85, 87, 223, 0.32);
 }
 
 .secondary-btn {
   color: #303b59;
   background: white;
-
   border: 1px solid #dce2ef;
 }
 
@@ -343,7 +314,6 @@ textarea:focus {
 .hero-mini-stats {
   display: flex;
   gap: 35px;
-
   margin-top: 45px;
 }
 
@@ -364,31 +334,44 @@ textarea:focus {
   font-size: 14px;
 }
 
-/* =========================
-   TECH VISUAL
-========================= */
+/* =========================================================
+   SMART MATCH VISUAL
+========================================================= */
 
 .tech-visual {
-  height: 580px;
   position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 620px;
+  height: 580px;
+
+  margin: 0 auto;
+
+  display: block;
+  overflow: hidden;
+
+  isolation: isolate;
 }
 
 .orbit {
   position: absolute;
 
-  width: 450px;
-  height: 450px;
+  left: 50%;
+  top: 50%;
+
+  margin: 0;
 
   border: 1px dashed rgba(85, 87, 223, 0.22);
-
   border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .orbit-one {
+  width: 450px;
+  height: 450px;
+
   animation: rotateOrbit 18s linear infinite;
 }
 
@@ -407,8 +390,17 @@ textarea:focus {
 }
 
 .tech-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
   width: 235px;
   height: 235px;
+
+  margin: 0;
+
+  transform: translate(-50%, -50%);
 
   border-radius: 50%;
 
@@ -431,8 +423,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
 
-  position: relative;
-  z-index: 3;
+  z-index: 5;
 
   animation: floating 4s ease-in-out infinite;
 }
@@ -445,15 +436,13 @@ textarea:focus {
   align-items: center;
   justify-content: center;
 
-  background: #eef0ff;
+  margin-bottom: 15px;
 
+  background: #eef0ff;
   border-radius: 20px;
 
   color: #5557df;
-
   font-size: 40px;
-
-  margin-bottom: 15px;
 }
 
 .tech-center strong {
@@ -475,9 +464,9 @@ textarea:focus {
 
 .floating-node {
   position: absolute;
+  z-index: 10;
 
   min-width: 150px;
-
   padding: 15px 20px;
 
   display: flex;
@@ -487,14 +476,14 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.94);
 
   border: 1px solid #dfe5f2;
-
   border-radius: 18px;
 
-  box-shadow:
-    0 18px 45px rgba(70, 82, 130, 0.12);
+  box-shadow: 0 18px 45px rgba(70, 82, 130, 0.12);
 
   font-size: 17px;
   font-weight: 600;
+
+  white-space: nowrap;
 
   animation: floating 4s ease-in-out infinite;
 }
@@ -508,45 +497,43 @@ textarea:focus {
   justify-content: center;
 
   background: #f0f1ff;
-
   border-radius: 13px;
 
   font-size: 21px;
 }
 
 .node-one {
-  top: 40px;
-  right: 20px;
+  top: 35px;
+  right: 35px;
 }
 
 .node-two {
-  left: 10px;
-  bottom: 110px;
+  left: 20px;
+  bottom: 115px;
   animation-delay: 0.7s;
 }
 
 .node-three {
-  right: 70px;
-  bottom: 15px;
+  right: 55px;
+  bottom: 25px;
   animation-delay: 1.2s;
 }
 
 .node-four {
-  left: 90px;
-  top: 200px;
+  left: 0;
+  top: 90px;
   animation-delay: 1.7s;
 }
 
-/* =========================
-   SECTION COMMON
-========================= */
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
 
 .stats-section,
 .feature-section,
 .flow-section {
   max-width: 1400px;
   margin: 0 auto;
-
   padding: 90px 55px;
 }
 
@@ -566,7 +553,6 @@ textarea:focus {
 
   font-size: 13px;
   font-weight: 800;
-
   letter-spacing: 2px;
 }
 
@@ -591,16 +577,15 @@ textarea:focus {
   line-height: 1.6;
 }
 
-/* =========================
+/* =========================================================
    STATS
-========================= */
+========================================================= */
 
 .stats-grid {
   margin-top: 50px;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
 }
 
@@ -610,11 +595,9 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.9);
 
   border: 1px solid #e0e5ef;
-
   border-radius: 22px;
 
-  box-shadow:
-    0 15px 40px rgba(64, 75, 125, 0.07);
+  box-shadow: 0 15px 40px rgba(64, 75, 125, 0.07);
 
   transition:
     transform 0.3s ease,
@@ -623,9 +606,7 @@ textarea:focus {
 
 .stat-card:hover {
   transform: translateY(-7px);
-
-  box-shadow:
-    0 25px 50px rgba(64, 75, 125, 0.13);
+  box-shadow: 0 25px 50px rgba(64, 75, 125, 0.13);
 }
 
 .stat-icon {
@@ -664,7 +645,6 @@ textarea:focus {
 
 .stat-card strong {
   display: block;
-
   margin-top: 24px;
 
   font-family: "Space Grotesk", sans-serif;
@@ -675,7 +655,6 @@ textarea:focus {
 
 .stat-card > span {
   display: block;
-
   margin-top: 3px;
 
   font-size: 17px;
@@ -684,23 +663,23 @@ textarea:focus {
 
 .stat-card small {
   display: block;
-
   margin-top: 8px;
 
   color: #7a8498;
   font-size: 14px;
 }
 
-/* =========================
+/* =========================================================
    FEATURES
-========================= */
+========================================================= */
 
 .feature-section {
-  background: rgba(244, 246, 253, 0.75);
-
   max-width: none;
+
   padding-left: max(55px, calc((100vw - 1290px) / 2));
   padding-right: max(55px, calc((100vw - 1290px) / 2));
+
+  background: rgba(244, 246, 253, 0.75);
 }
 
 .feature-grid {
@@ -712,14 +691,12 @@ textarea:focus {
 .feature-card {
   position: relative;
 
-  padding: 38px;
-
   min-height: 330px;
+  padding: 38px;
 
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 25px;
 
   overflow: hidden;
@@ -732,18 +709,11 @@ textarea:focus {
 .feature-card:hover {
   transform: translateY(-8px);
 
-  box-shadow:
-    0 25px 55px rgba(62, 75, 130, 0.12);
+  box-shadow: 0 25px 55px rgba(62, 75, 130, 0.12);
 }
 
 .feature-card.highlight {
-  background:
-    linear-gradient(
-      145deg,
-      #f3f3ff,
-      #effbfd
-    );
-
+  background: linear-gradient(145deg, #f3f3ff, #effbfd);
   border-color: #d8dcff;
 }
 
@@ -769,7 +739,6 @@ textarea:focus {
   justify-content: center;
 
   background: #f0f1ff;
-
   border-radius: 18px;
 
   font-size: 29px;
@@ -800,7 +769,6 @@ textarea:focus {
   border-radius: 8px;
 
   background: #e5e7ff;
-
   color: #5557df;
 
   font-size: 11px;
@@ -808,16 +776,17 @@ textarea:focus {
   letter-spacing: 1px;
 }
 
-/* =========================
+/* =========================================================
    FLOW
-========================= */
+========================================================= */
 
 .flow-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1fr auto 1fr;
 
   align-items: center;
-
   gap: 15px;
 }
 
@@ -838,7 +807,6 @@ textarea:focus {
   border-radius: 50%;
 
   background: #eef0ff;
-
   color: #5557df;
 
   font-family: "Space Grotesk", sans-serif;
@@ -868,22 +836,17 @@ textarea:focus {
   width: 55px;
   height: 2px;
 
-  background: linear-gradient(
-    90deg,
-    #5557df,
-    #20b8ca
-  );
+  background: linear-gradient(90deg, #5557df, #20b8ca);
 }
 
-/* =========================
+/* =========================================================
    CTA
-========================= */
+========================================================= */
 
 .cta-section {
   max-width: 1290px;
 
   margin: 20px auto 90px;
-
   padding: 55px;
 
   display: flex;
@@ -893,12 +856,7 @@ textarea:focus {
 
   border-radius: 30px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #eef0ff,
-      #eafafd
-    );
+  background: linear-gradient(135deg, #eef0ff, #eafafd);
 
   border: 1px solid #dce2f0;
 }
@@ -917,21 +875,22 @@ textarea:focus {
   font-size: 16px;
 }
 
-/* =========================
+/* =========================================================
    INNER PAGES
-========================= */
+========================================================= */
 
 .inner-page {
   max-width: 1400px;
 
   margin: 0 auto;
-
   padding: 75px 55px 100px;
+
+  position: relative;
+  z-index: 1;
 }
 
 .page-header {
   max-width: 850px;
-
   margin-bottom: 50px;
 }
 
@@ -942,7 +901,6 @@ textarea:focus {
 
   font-size: 58px;
   line-height: 1.05;
-
   letter-spacing: -2px;
 }
 
@@ -955,31 +913,46 @@ textarea:focus {
   line-height: 1.6;
 }
 
-/* =========================
+/* =========================================================
    REPORT PAGE
-========================= */
+========================================================= */
 
 .report-layout {
   display: grid;
+
   grid-template-columns: 1.4fr 0.6fr;
   gap: 30px;
+
+  align-items: start;
 }
 
 .modern-form {
+  position: relative;
+  z-index: 10;
+
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 26px;
 
   padding: 35px;
 
-  box-shadow:
-    0 20px 55px rgba(66, 77, 125, 0.07);
+  box-shadow: 0 20px 55px rgba(66, 77, 125, 0.07);
+}
+
+.modern-form input,
+.modern-form select,
+.modern-form textarea,
+.modern-form button {
+  position: relative;
+  z-index: 11;
+
+  pointer-events: auto;
 }
 
 .type-selector {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 
@@ -988,7 +961,6 @@ textarea:focus {
 
 .type-btn {
   min-height: 90px;
-
   padding: 18px;
 
   display: flex;
@@ -1001,10 +973,13 @@ textarea:focus {
   border-radius: 17px;
 
   background: #fafbfe;
-
   color: #303a55;
 
-  transition: 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .type-btn:hover {
@@ -1015,7 +990,8 @@ textarea:focus {
 .type-btn.selected {
   background: #f1f2ff;
   border-color: #7779ed;
-  box-shadow: 0 8px 25px rgba(85, 87, 223, 0.10);
+
+  box-shadow: 0 8px 25px rgba(85, 87, 223, 0.1);
 }
 
 .type-btn > span {
@@ -1024,7 +1000,6 @@ textarea:focus {
 
 .type-btn strong {
   display: block;
-
   font-size: 17px;
 }
 
@@ -1039,7 +1014,6 @@ textarea:focus {
 
 .form-section {
   padding-top: 30px;
-
   margin-top: 25px;
 
   border-top: 1px solid #e8ebf2;
@@ -1063,11 +1037,15 @@ textarea:focus {
 
 .form-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
 .input-group {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -1086,79 +1064,91 @@ textarea:focus {
 .input-group input,
 .input-group select,
 .input-group textarea {
+  display: block;
+
   width: 100%;
 
   padding: 15px 16px;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 12px;
 
   background: #fbfcff;
-
   color: #202a45;
 
   font-size: 16px;
 
-  transition: 0.25s ease;
+  appearance: auto;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #9aa3b5;
+}
+
+.input-group input:hover,
+.input-group select:hover,
+.input-group textarea:hover {
+  border-color: #c8cee0;
 }
 
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
   border-color: #7779ed;
-
   background: white;
 
-  box-shadow:
-    0 0 0 4px rgba(85, 87, 223, 0.08);
+  box-shadow: 0 0 0 4px rgba(85, 87, 223, 0.08);
 }
 
 .input-group textarea {
-  resize: vertical;
   min-height: 145px;
+  resize: vertical;
 }
 
 .submit-btn {
+  position: relative;
+  z-index: 12;
+
   width: 100%;
+  min-height: 58px;
 
   margin-top: 30px;
-
-  min-height: 58px;
 
   border-radius: 14px;
 
   color: white;
 
-  background: linear-gradient(
-    135deg,
-    #5557df,
-    #20aeca
-  );
+  background: linear-gradient(135deg, #5557df, #20aeca);
 
   font-size: 17px;
   font-weight: 800;
 
-  box-shadow:
-    0 15px 30px rgba(85, 87, 223, 0.22);
+  box-shadow: 0 15px 30px rgba(85, 87, 223, 0.22);
 
-  transition: 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .submit-btn:hover {
   transform: translateY(-3px);
 
-  box-shadow:
-    0 20px 38px rgba(85, 87, 223, 0.3);
+  box-shadow: 0 20px 38px rgba(85, 87, 223, 0.3);
 }
 
 .submit-btn span {
   margin-left: 10px;
 }
 
-/* =========================
+/* =========================================================
    REPORT SIDEBAR
-========================= */
+========================================================= */
 
 .report-side {
   display: flex;
@@ -1172,11 +1162,9 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 23px;
 
-  box-shadow:
-    0 15px 40px rgba(66, 77, 125, 0.06);
+  box-shadow: 0 15px 40px rgba(66, 77, 125, 0.06);
 }
 
 .side-icon {
@@ -1188,7 +1176,6 @@ textarea:focus {
   justify-content: center;
 
   background: #eef0ff;
-
   border-radius: 15px;
 
   font-size: 25px;
@@ -1212,13 +1199,11 @@ textarea:focus {
 
 .match-demo {
   margin-top: 25px;
-
   padding: 17px;
 
   border-radius: 15px;
 
   background: #f7f8fd;
-
   border: 1px solid #e4e7f0;
 }
 
@@ -1241,12 +1226,11 @@ textarea:focus {
 }
 
 .match-arrow {
-  text-align: center;
-
   margin: 8px 0;
 
-  color: #5557df;
+  text-align: center;
 
+  color: #5557df;
   font-size: 20px;
 }
 
@@ -1254,26 +1238,24 @@ textarea:focus {
   display: inline-block;
 
   margin-top: 12px;
-
   padding: 6px 9px;
 
   border-radius: 7px;
 
   color: #1f9362;
-
   background: #eaf9f1;
 
   font-size: 11px;
 }
 
-/* =========================
+/* =========================================================
    EXPLORE
-========================= */
+========================================================= */
 
 .explore-toolbar {
   display: grid;
-  grid-template-columns: 1fr 190px 190px 120px;
 
+  grid-template-columns: 1fr 190px 190px 120px;
   gap: 12px;
 
   margin-bottom: 25px;
@@ -1291,11 +1273,12 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 13px;
 }
 
 .search-box span {
+  flex-shrink: 0;
+
   font-size: 25px;
   color: #68738a;
 }
@@ -1304,9 +1287,9 @@ textarea:focus {
   width: 100%;
 
   border: none;
+  outline: none;
 
   background: transparent;
-
   color: #202a45;
 
   font-size: 16px;
@@ -1321,7 +1304,6 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 13px;
 
   color: #3c4761;
@@ -1354,7 +1336,6 @@ textarea:focus {
   color: #5557df;
 
   font-family: "Space Grotesk", sans-serif;
-
   font-size: 25px;
 }
 
@@ -1362,7 +1343,6 @@ textarea:focus {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
-
   gap: 22px;
 }
 
@@ -1372,11 +1352,9 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 22px;
 
-  box-shadow:
-    0 15px 40px rgba(66, 77, 125, 0.06);
+  box-shadow: 0 15px 40px rgba(66, 77, 125, 0.06);
 
   transition:
     transform 0.3s ease,
@@ -1386,25 +1364,18 @@ textarea:focus {
 .item-card:hover {
   transform: translateY(-7px);
 
-  box-shadow:
-    0 25px 55px rgba(66, 77, 125, 0.12);
+  box-shadow: 0 25px 55px rgba(66, 77, 125, 0.12);
 }
 
 .item-top {
   min-height: 135px;
-
   padding: 20px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f1f2ff,
-      #eefbfd
-    );
+  background: linear-gradient(135deg, #f1f2ff, #eefbfd);
 }
 
 .item-visual {
@@ -1416,7 +1387,6 @@ textarea:focus {
   justify-content: center;
 
   background: rgba(255, 255, 255, 0.8);
-
   border-radius: 20px;
 
   font-size: 38px;
@@ -1462,13 +1432,11 @@ textarea:focus {
   margin-top: 7px;
 
   font-family: "Space Grotesk", sans-serif;
-
   font-size: 24px;
 }
 
 .item-content > p {
   min-height: 50px;
-
   margin-top: 10px;
 
   color: #707a90;
@@ -1485,13 +1453,11 @@ textarea:focus {
   margin-top: 18px;
 
   color: #566179;
-
   font-size: 13px;
 }
 
 .item-match {
   margin-top: 20px;
-
   padding: 13px;
 
   display: flex;
@@ -1499,7 +1465,6 @@ textarea:focus {
   justify-content: space-between;
 
   border-radius: 13px;
-
   background: #f5f6fc;
 }
 
@@ -1531,15 +1496,13 @@ textarea:focus {
 
 .claim-btn {
   width: 100%;
+  min-height: 47px;
 
   margin-top: 15px;
-
-  min-height: 47px;
 
   border-radius: 11px;
 
   background: #eef0ff;
-
   color: #5557df;
 
   font-size: 14px;
@@ -1553,9 +1516,9 @@ textarea:focus {
   color: white;
 }
 
-/* =========================
+/* =========================================================
    EMPTY / LOADING
-========================= */
+========================================================= */
 
 .empty-state {
   min-height: 350px;
@@ -1570,7 +1533,6 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.8);
 
   border: 1px solid #e0e5ef;
-
   border-radius: 25px;
 }
 
@@ -1589,7 +1551,6 @@ textarea:focus {
   margin-top: 8px;
 
   color: #727c90;
-
   font-size: 16px;
 }
 
@@ -1609,15 +1570,14 @@ textarea:focus {
   animation: spin 0.8s linear infinite;
 }
 
-/* =========================
+/* =========================================================
    ADMIN
-========================= */
+========================================================= */
 
 .admin-stats {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
 
   margin-bottom: 30px;
@@ -1629,7 +1589,6 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 20px;
 }
 
@@ -1660,13 +1619,12 @@ textarea:focus {
 }
 
 .admin-panel {
+  overflow: hidden;
+
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 24px;
-
-  overflow: hidden;
 }
 
 .admin-panel-header {
@@ -1696,7 +1654,12 @@ textarea:focus {
 
   display: grid;
 
-  grid-template-columns: 1.6fr 0.8fr 1fr 0.8fr 0.8fr;
+  grid-template-columns:
+    1.6fr
+    0.8fr
+    1fr
+    0.8fr
+    0.8fr;
 
   gap: 20px;
 
@@ -1707,7 +1670,6 @@ textarea:focus {
   border-bottom: 1px solid #edf0f5;
 
   color: #59647a;
-
   font-size: 14px;
 }
 
@@ -1718,13 +1680,11 @@ textarea:focus {
 
   font-size: 11px;
   font-weight: 800;
-
   letter-spacing: 1px;
 }
 
 .table-row strong {
   display: block;
-
   color: #26314c;
 }
 
@@ -1765,9 +1725,7 @@ textarea:focus {
 
 .table-empty {
   padding: 40px;
-
   text-align: center;
-
   color: #7a8498;
 }
 
@@ -1775,7 +1733,6 @@ textarea:focus {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
 
   margin-top: 25px;
@@ -1787,7 +1744,6 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 22px;
 }
 
@@ -1806,7 +1762,6 @@ textarea:focus {
   margin-top: 10px;
 
   color: #6c768b;
-
   line-height: 1.6;
 }
 
@@ -1822,9 +1777,9 @@ textarea:focus {
   letter-spacing: 1px;
 }
 
-/* =========================
+/* =========================================================
    NOTIFICATION
-========================= */
+========================================================= */
 
 .notification {
   position: fixed;
@@ -1832,9 +1787,9 @@ textarea:focus {
   top: 25px;
   right: 25px;
 
-  z-index: 100;
+  z-index: 1000;
 
-  max-width: 420px;
+  max-width: min(420px, calc(100vw - 40px));
 
   padding: 16px 20px;
 
@@ -1845,11 +1800,9 @@ textarea:focus {
   background: white;
 
   border: 1px solid #dfe4ef;
-
   border-radius: 14px;
 
-  box-shadow:
-    0 20px 45px rgba(47, 58, 105, 0.18);
+  box-shadow: 0 20px 45px rgba(47, 58, 105, 0.18);
 
   font-size: 15px;
   font-weight: 600;
@@ -1865,21 +1818,19 @@ textarea:focus {
   border-left: 5px solid #e45c6d;
 }
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .footer {
   max-width: 1400px;
 
   margin: 0 auto;
-
   padding: 35px 55px;
 
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr;
-
   align-items: center;
 
   border-top: 1px solid #dfe4ef;
@@ -1898,7 +1849,6 @@ textarea:focus {
   height: 42px;
 
   font-size: 20px;
-
   border-radius: 12px;
 }
 
@@ -1921,19 +1871,17 @@ textarea:focus {
 
 .footer-center {
   text-align: center;
-
   font-size: 13px;
 }
 
 .footer-right {
   text-align: right;
-
   font-size: 13px;
 }
 
-/* =========================
+/* =========================================================
    ANIMATIONS
-========================= */
+========================================================= */
 
 @keyframes floating {
   0%,
@@ -1948,38 +1896,35 @@ textarea:focus {
 
 @keyframes pulse {
   0% {
-    box-shadow:
-      0 0 0 0 rgba(37, 170, 112, 0.35);
+    box-shadow: 0 0 0 0 rgba(37, 170, 112, 0.35);
   }
 
   70% {
-    box-shadow:
-      0 0 0 10px rgba(37, 170, 112, 0);
+    box-shadow: 0 0 0 10px rgba(37, 170, 112, 0);
   }
 
   100% {
-    box-shadow:
-      0 0 0 0 rgba(37, 170, 112, 0);
+    box-shadow: 0 0 0 0 rgba(37, 170, 112, 0);
   }
 }
 
 @keyframes rotateOrbit {
   from {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
 @keyframes rotateOrbitReverse {
   from {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 
   to {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 
@@ -2013,12 +1958,26 @@ textarea:focus {
   }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1100px) {
-
   .navbar {
     flex-wrap: wrap;
   }
@@ -2045,7 +2004,49 @@ textarea:focus {
   }
 
   .tech-visual {
-    height: 500px;
+    max-width: 620px;
+    height: 520px;
+    margin: 10px auto 0;
+  }
+
+  .orbit-one {
+    width: 410px;
+    height: 410px;
+  }
+
+  .orbit-two {
+    width: 320px;
+    height: 320px;
+  }
+
+  .orbit-three {
+    width: 235px;
+    height: 235px;
+  }
+
+  .tech-center {
+    width: 215px;
+    height: 215px;
+  }
+
+  .node-one {
+    top: 20px;
+    right: 25px;
+  }
+
+  .node-two {
+    left: 10px;
+    bottom: 95px;
+  }
+
+  .node-three {
+    right: 25px;
+    bottom: 15px;
+  }
+
+  .node-four {
+    left: 0;
+    top: 90px;
   }
 
   .stats-grid {
@@ -2069,15 +2070,21 @@ textarea:focus {
   }
 }
 
-@media (max-width: 750px) {
+/* =========================================================
+   MOBILE
+========================================================= */
 
+@media (max-width: 750px) {
   .navbar {
+    width: calc(100% - 20px);
     padding: 18px;
   }
 
   .nav-links {
+    width: 100%;
     overflow-x: auto;
     justify-content: flex-start;
+    padding-bottom: 3px;
   }
 
   .nav-links button {
@@ -2089,6 +2096,7 @@ textarea:focus {
   }
 
   .hero {
+    min-height: auto;
     padding: 65px 22px 40px;
   }
 
@@ -2113,17 +2121,108 @@ textarea:focus {
 
   .hero-mini-stats {
     gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tech-visual {
-    transform: scale(0.82);
-    margin-top: -40px;
+    width: 100%;
+    max-width: 430px;
+    height: 430px;
+    margin: 20px auto 0;
+  }
+
+  .orbit-one {
+    width: 330px;
+    height: 330px;
+  }
+
+  .orbit-two {
+    width: 265px;
+    height: 265px;
+  }
+
+  .orbit-three {
+    width: 205px;
+    height: 205px;
+  }
+
+  .tech-center {
+    width: 190px;
+    height: 190px;
+  }
+
+  .center-icon {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 10px;
+
+    border-radius: 16px;
+
+    font-size: 32px;
+  }
+
+  .tech-center strong {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .tech-center span {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .floating-node {
+    min-width: 125px;
+
+    padding: 10px 12px;
+
+    gap: 8px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+  }
+
+  .floating-node span {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+  }
+
+  .node-one {
+    top: 5px;
+    right: 5px;
+  }
+
+  .node-two {
+    left: 0;
+    bottom: 85px;
+  }
+
+  .node-three {
+    right: 5px;
+    bottom: 0;
+  }
+
+  .node-four {
+    left: 0;
+    top: 85px;
   }
 
   .stats-section,
   .feature-section,
   .flow-section {
     padding: 65px 22px;
+  }
+
+  .feature-section {
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .section-heading h2 {
@@ -2146,6 +2245,7 @@ textarea:focus {
   .cta-section {
     margin: 20px 22px 60px;
     padding: 30px;
+
     flex-direction: column;
     align-items: flex-start;
   }
@@ -2156,6 +2256,14 @@ textarea:focus {
 
   .page-header h1 {
     font-size: 43px;
+  }
+
+  .page-header p {
+    font-size: 17px;
+  }
+
+  .modern-form {
+    padding: 22px;
   }
 
   .type-selector,
@@ -2186,6 +2294,7 @@ textarea:focus {
   .footer {
     grid-template-columns: 1fr;
     gap: 20px;
+
     text-align: center;
   }
 
@@ -2203,429 +2312,97 @@ textarea:focus {
 }
 
 /* =========================================================
-   CAMPUSFIND SMART MATCH VISUAL - FINAL LAYOUT FIX
-   This override keeps the complete visual inside its column.
+   SMALL PHONES
 ========================================================= */
 
-.tech-visual {
-  position: relative;
-  width: 100%;
-  max-width: 620px;
-  height: 580px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: block;
-}
-
-.tech-visual .orbit {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.tech-visual .orbit-one {
-  width: 450px;
-  height: 450px;
-}
-
-.tech-visual .orbit-two {
-  width: 350px;
-  height: 350px;
-}
-
-.tech-visual .orbit-three {
-  width: 260px;
-  height: 260px;
-}
-
-.tech-visual .tech-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 235px;
-  height: 235px;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-}
-
-.tech-visual .floating-node {
-  position: absolute;
-  z-index: 10;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.tech-visual .node-one {
-  top: 35px;
-  right: 35px;
-}
-
-.tech-visual .node-two {
-  left: 20px;
-  bottom: 115px;
-}
-
-.tech-visual .node-three {
-  right: 55px;
-  bottom: 25px;
-}
-
-.tech-visual .node-four {
-  left: 65px;
-  top: 205px;
-}
-
-/* Prevent the existing mobile scale rule from shrinking/cropping the visual. */
-@media (max-width: 1100px) {
-  .tech-visual {
-    width: 100%;
-    max-width: 620px;
-    height: 520px;
-    margin: 10px auto 0;
-    transform: none;
-  }
-
-  .tech-visual .orbit-one {
-    width: 410px;
-    height: 410px;
-  }
-
-  .tech-visual .orbit-two {
-    width: 320px;
-    height: 320px;
-  }
-
-  .tech-visual .orbit-three {
-    width: 235px;
-    height: 235px;
-  }
-
-  .tech-visual .tech-center {
-    width: 215px;
-    height: 215px;
-  }
-
-  .tech-visual .node-one {
-    top: 20px;
-    right: 25px;
-  }
-
-  .tech-visual .node-two {
-    left: 10px;
-    bottom: 95px;
-  }
-
-  .tech-visual .node-three {
-    right: 25px;
-    bottom: 15px;
-  }
-
-  .tech-visual .node-four {
-    left: 35px;
-    top: 180px;
-  }
-}
-
-@media (max-width: 750px) {
-  .tech-visual {
-    width: 100%;
-    max-width: 430px;
-    height: 430px;
-    margin: 20px auto 0;
-    transform: none;
-  }
-
-  .tech-visual .orbit-one {
-    width: 330px;
-    height: 330px;
-  }
-
-  .tech-visual .orbit-two {
-    width: 265px;
-    height: 265px;
-  }
-
-  .tech-visual .orbit-three {
-    width: 205px;
-    height: 205px;
-  }
-
-  .tech-visual .tech-center {
-    width: 190px;
-    height: 190px;
-  }
-
-  .tech-visual .center-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 10px;
-    border-radius: 16px;
-    font-size: 32px;
-  }
-
-  .tech-visual .tech-center strong {
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-
-  .tech-visual .tech-center span {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .tech-visual .floating-node {
-    min-width: 125px;
-    padding: 10px 12px;
-    gap: 8px;
-    border-radius: 14px;
-    font-size: 14px;
-  }
-
-  .tech-visual .floating-node span {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    font-size: 17px;
-  }
-
-  .tech-visual .node-one {
-    top: 5px;
-    right: 5px;
-  }
-
-  .tech-visual .node-two {
-    left: 0;
-    bottom: 85px;
-  }
-
-  .tech-visual .node-three {
-    right: 5px;
-    bottom: 0;
-  }
-
-  .tech-visual .node-four {
-    left: 20px;
-    top: 145px;
-  }
-}
-
 @media (max-width: 450px) {
+  .brand h2 {
+    font-size: 21px;
+  }
+
+  .brand span {
+    font-size: 12px;
+  }
+
+  .brand-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
   .tech-visual {
     max-width: 360px;
     height: 360px;
   }
 
-  .tech-visual .orbit-one {
+  .orbit-one {
     width: 280px;
     height: 280px;
   }
 
-  .tech-visual .orbit-two {
+  .orbit-two {
     width: 220px;
     height: 220px;
   }
 
-  .tech-visual .orbit-three {
+  .orbit-three {
     width: 170px;
     height: 170px;
   }
 
-  .tech-visual .tech-center {
+  .tech-center {
     width: 165px;
     height: 165px;
   }
 
-  .tech-visual .floating-node {
+  .floating-node {
     min-width: 108px;
     padding: 8px 9px;
+
     font-size: 12px;
     gap: 6px;
   }
 
-  .tech-visual .floating-node span {
+  .floating-node span {
     width: 29px;
     height: 29px;
+
     font-size: 15px;
   }
 
-  .tech-visual .node-one {
+  .node-one {
     top: 0;
     right: 0;
   }
 
-  .tech-visual .node-two {
+  .node-two {
     left: 0;
     bottom: 65px;
   }
 
-  .tech-visual .node-three {
+  .node-three {
     right: 0;
     bottom: 0;
   }
 
-  .tech-visual .node-four {
-    left: 5px;
-    top: 120px;
-  }
-}
-
-/* =========================================================
-   FINAL SMART MATCH POSITIONING FIX
-   IMPORTANT: the original animations use transform and were
-   overriding translate(-50%, -50%) positioning.
-========================================================= */
-
-.tech-visual .tech-center {
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  animation: none !important;
-}
-
-.tech-visual .orbit {
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  animation: none !important;
-}
-
-/* Keep the four cards in their intended positions. */
-.tech-visual .node-one {
-  top: 35px !important;
-  right: 35px !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-}
-
-.tech-visual .node-two {
-  left: 20px !important;
-  bottom: 115px !important;
-  top: auto !important;
-  right: auto !important;
-  transform: none !important;
-}
-
-.tech-visual .node-three {
-  right: 55px !important;
-  bottom: 25px !important;
-  left: auto !important;
-  top: auto !important;
-  transform: none !important;
-}
-
-.tech-visual .node-four {
-  left: 65px !important;
-  top: 205px !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-}
-
-@media (max-width: 1100px) {
-  .tech-visual .node-one {
-    top: 20px !important;
-    right: 25px !important;
+  .node-four {
+    left: 0;
+    top: 70px;
   }
 
-  .tech-visual .node-two {
-    left: 10px !important;
-    bottom: 95px !important;
+  .modern-form {
+    padding: 18px;
   }
 
-  .tech-visual .node-three {
-    right: 25px !important;
-    bottom: 15px !important;
+  .type-btn {
+    min-height: 80px;
   }
 
-  .tech-visual .node-four {
-    left: 35px !important;
-    top: 180px !important;
-  }
-}
-
-@media (max-width: 750px) {
-  .tech-visual .node-one {
-    top: 5px !important;
-    right: 5px !important;
-  }
-
-  .tech-visual .node-two {
-    left: 0 !important;
-    bottom: 85px !important;
-  }
-
-  .tech-visual .node-three {
-    right: 5px !important;
-    bottom: 0 !important;
-  }
-
-  .tech-visual .node-four {
-    left: 20px !important;
-    top: 145px !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .tech-visual .node-one {
-    top: 0 !important;
-    right: 0 !important;
-  }
-
-  .tech-visual .node-two {
-    left: 0 !important;
-    bottom: 65px !important;
-  }
-
-  .tech-visual .node-three {
-    right: 0 !important;
-    bottom: 0 !important;
-  }
-
-  .tech-visual .node-four {
-    left: 5px !important;
-    top: 120px !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL FIX - KEEP ID CARD OUTSIDE SMART MATCH CIRCLE
-   ========================================================= */
-
-.tech-visual .node-four {
-  left: 0 !important;
-  top: 90px !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  z-index: 10;
-}
-
-/* Tablet */
-@media (max-width: 1100px) {
-  .tech-visual .node-four {
-    left: 0 !important;
-    top: 90px !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 750px) {
-  .tech-visual .node-four {
-    left: 0 !important;
-    top: 85px !important;
-  }
-}
-
-/* Small phones */
-@media (max-width: 450px) {
-  .tech-visual .node-four {
-    left: 0 !important;
-    top: 70px !important;
+  .section-heading h2 {
+    font-size: 35px;
   }
 }
